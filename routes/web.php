@@ -21,4 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/thyssenkrupp/home', [App\Http\Controllers\UserController::class, 'index'])->name('user.home');
+Route::get('/admin/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
 Route::get('/info', [App\Http\Controllers\UserController::class, 'info'])->name('info');

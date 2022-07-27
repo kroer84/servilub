@@ -4,20 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('AdminUser');
     }
 
     public function index()
     {
-        return view('thyssenkrupp.home');
-    }
-
-    public function info()
-    {
-        return view('info');
+        return view('admin.home');
     }
 }

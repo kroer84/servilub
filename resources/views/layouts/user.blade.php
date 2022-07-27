@@ -216,6 +216,7 @@
 
 
         <main class="py-3">
+            user
             @yield('content')
         </main>
     </div>

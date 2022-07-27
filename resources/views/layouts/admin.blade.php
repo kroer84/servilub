@@ -216,6 +216,7 @@
 
 
         <main class="py-3">
+            admin
             @yield('content')
         </main>
     </div>

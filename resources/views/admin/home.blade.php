@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    pagina eheredada de user
+                    pagina eheredada de admin
 
                 </div>
             </div>

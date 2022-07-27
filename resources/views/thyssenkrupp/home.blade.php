@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    pagina eheredada de user
+                    pagina eheredada de user 2
 
                 </div>
             </div>
