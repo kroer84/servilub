@@ -11,3 +11,5 @@ admin_sidebarToggle.addEventListener("click", function(){
     document.querySelector("#admin").classList.toggle("active");
     document.getElementById("admin_sidebarToggle").classList.toggle("active");
 });
+
+windows.Swal = require('sweetalert2');

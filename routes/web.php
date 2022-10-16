@@ -22,5 +22,16 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/thyssenkrupp/home', [App\Http\Controllers\UserController::class, 'index'])->name('user.home');
-Route::get('/admin/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
 Route::get('/info', [App\Http\Controllers\UserController::class, 'info'])->name('info');
+// Administrador HOME
+Route::get('/admin/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
+// Administrador USUARIOS
+Route::get('/admin/users', [App\Http\Controllers\UsuarioController::class, 'index'])->name('admin.users.index');
+Route::get('/admin/users/create', [App\Http\Controllers\UsuarioController::class, 'create'])->name('admin.users.create');
+Route::post('/admin/users', [App\Http\Controllers\UsuarioController::class, 'store'])->name('admin.users.store');
+Route::get('/admin/users/{user}/edit', [App\Http\Controllers\UsuarioController::class, 'edit'])->name('admin.users.edit');
+Route::put('/admin/users/{user}', [App\Http\Controllers\UsuarioController::class, 'update'])->name('admin.users.update');
+Route::get('/admin/users/{user}', [App\Http\Controllers\UsuarioController::class, 'show'])->name('admin.users.show');
+Route::delete('/admin/users/{user}', [App\Http\Controllers\UsuarioController::class, 'destroy'])->name('admin.users.destroy');
+
+

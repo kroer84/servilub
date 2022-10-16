@@ -29,7 +29,7 @@ class HomeController extends Controller
             return view('thyssenkrupp.home');
             // return 'user';
         }elseif(Auth::check() && Auth::user()->role == 'Admin'){
-            return view('admin.home');
+            return redirect('admin/home');
             // return 'administrador';
         }else{
             Auth::logout();

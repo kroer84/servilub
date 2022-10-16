@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    {{--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 </head>
@@ -39,12 +40,12 @@
                         </div>
                         <div class="brand-name-container">
 
-                                <div class="brand-name1">
-                                    Servi
-                                </div>
-                                <div class="brand-name2">
-                                    Lub
-                                </div>
+                            <div class="brand-name1">
+                                Servi
+                            </div>
+                            <div class="brand-name2">
+                                Lub
+                            </div>
 
                         </div>
                     </div>
@@ -52,20 +53,20 @@
             </a>
             <ul>
                 @auth
-                    <div class="dropdown">
-                        {{ Auth::user()->name }}
-                        <span class="fa-solid fa-circle-chevron-down margen-der color"></span>
-                        <div class="dropdown-content">
-                            <a class="dropdown-element" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <div class="dropdown">
+                    {{ Auth::user()->name }}
+                    <span class="fa-solid fa-circle-chevron-down margen-der color"></span>
+                    <div class="dropdown-content">
+                        <a class="dropdown-element" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                        <i class="fa-solid fa-arrow-right-from-bracket margen-izq color"></i>
-                                        {{ __('Logout') }}
-                                    </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                @csrf
-                            </form>
-                        </div>
+                            <i class="fa-solid fa-arrow-right-from-bracket margen-izq color"></i>
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                     </div>
+                </div>
                 @endauth
             </ul>
         </nav>
@@ -75,14 +76,26 @@
         <div class="sidebar">
             <div class="sidebar-body">
                 <ul class="navigation-list">
-                    <li class="navigation-list-item active">
-                        <a class="navigation-link" href="{{ url('/') }}">
+                    <li class="navigation-list-item {{ active('admin/home') }}">
+                        <a class="navigation-link" href="{{ route('admin.home') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-house color"></i>
                                 </div>
                                 <div class="col-10 color">
                                     admin
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="navigation-list-item {{ active('admin/users') }}">
+                        <a class="navigation-link" href="{{ route('admin.users.index') }}">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-user color"></i>
+                                </div>
+                                <div class="col-10 color">
+                                    Usuarios
                                 </div>
                             </div>
                         </a>
@@ -192,16 +205,16 @@
                 <i class="fa-solid fa-bars icono"></i>
             </button>
 
-                <div class="row">
-                    <div class="col">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-md-12">
-                                    {{ $slot }}
-                                </div>
+            <div class="row">
+                <div class="col">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                {{ $slot }}
                             </div>
                         </div>
                     </div>
+                </div>
 
             </div>
         </div>

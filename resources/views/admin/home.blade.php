@@ -10,7 +10,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            view>admin>home
+            view>admin>homeasdasd
         </div>
     </div>
 </x-layouts.admin>
