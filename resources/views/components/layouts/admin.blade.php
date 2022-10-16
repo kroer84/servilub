@@ -100,6 +100,30 @@
                             </div>
                         </a>
                     </li>
+                    <li class="navigation-list-item {{ active('admin/maquinas') }}">
+                        <a class="navigation-link" href="{{ route('maquinas.index') }}">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-robot color"></i>
+                                </div>
+                                <div class="col-10 color">
+                                    Maquinas
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="navigation-list-item {{ active('admin/mangueras') }}">
+                        <a class="navigation-link" href="{{ route('mangueras.index') }}">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-bacon"></i>
+                                </div>
+                                <div class="col-10 color">
+                                    Mangueras
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                     <li class="navigation-list-item">
                         <a class="navigation-link" href="{{ url('/') }}">
                             <div class="row">

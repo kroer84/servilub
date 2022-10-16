@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MaquinaController;
+use App\Http\Controllers\MangueraController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,5 +36,8 @@ Route::get('/admin/users/{user}/edit', [App\Http\Controllers\UsuarioController::
 Route::put('/admin/users/{user}', [App\Http\Controllers\UsuarioController::class, 'update'])->name('admin.users.update');
 Route::get('/admin/users/{user}', [App\Http\Controllers\UsuarioController::class, 'show'])->name('admin.users.show');
 Route::delete('/admin/users/{user}', [App\Http\Controllers\UsuarioController::class, 'destroy'])->name('admin.users.destroy');
-
+//Maquinas
+Route::resource('admin/maquinas', MaquinaController::class);
+//Mangueras
+Route::resource('admin/mangueras', MangueraController::class);
 
