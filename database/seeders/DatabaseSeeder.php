@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Maquina;
+use App\Models\Manguera;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Auth\User;
-use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -62,5 +64,40 @@ class DatabaseSeeder extends Seeder
             $user->password = '$2y$10$gYZJ6xJmJsRf9Q2qnP7go.lR0eB/.Mz0Ju0HTCOKKXSOxJpclgpXK';
             $user->remember_token = Str::random(10);
         $user->save();
+
+        $maquina = new Maquina();
+        $maquina->no_maq = "M1694";
+        $maquina->des_maq = "PRENSA 200 TONELADAS";
+        $maquina->save();
+
+        $manguera = new Manguera();
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->fitting1 = "Recta";
+        $manguera->fitting2 = "90° L28";
+        $manguera->longitud = "1430";
+        $manguera->presion = "215";
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->fitting1 = "Recta S20";
+        $manguera->fitting2 = "BRIDA 45°";
+        $manguera->longitud = "1000";
+        $manguera->presion = "280";
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->fitting1 = "Recta S20";
+        $manguera->fitting2 = "BRIDA 45°";
+        $manguera->longitud = "1000";
+        $manguera->presion = "280";
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
     }
 }
