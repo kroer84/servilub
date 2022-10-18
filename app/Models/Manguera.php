@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Manguera extends Model
 {
     use HasFactory;
+
+    public function maquinas(){
+        return $this->belongsToMany('App\Models\Maquina');
+    }
+
 }
+
