@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MaquinaController;
 use App\Http\Controllers\MangueraController;
 use App\Http\Controllers\MaguerasMaquinasController;
+use App\Http\Controllers\ReportesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +44,6 @@ Route::resource('admin/maquinas', MaquinaController::class);
 Route::resource('admin/mangueras', MangueraController::class);
 //mangueras_maquinas
 Route::resource('admin/Instalacion', MaguerasMaquinasController::class);
+//Reportes
+Route::get('/admin/reportes', [App\Http\Controllers\ReportesController::class, 'index'])->name('admin.reporte.index');
 

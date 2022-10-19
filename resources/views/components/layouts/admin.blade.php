@@ -116,7 +116,7 @@
                         <a class="navigation-link" href="{{ route('mangueras.index') }}">
                             <div class="row">
                                 <div class="col-2">
-                                    <i class="fa-solid fa-bacon"></i>
+                                    <i class="fa-solid fa-bacon color"></i>
                                 </div>
                                 <div class="col-10 color">
                                     Mangueras
@@ -128,7 +128,7 @@
                         <a class="navigation-link" href="{{ route('Instalacion.index') }}">
                             <div class="row">
                                 <div class="col-2">
-                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    <i class="fa-solid fa-screwdriver-wrench color"></i>
                                 </div>
                                 <div class="col-10 color">
                                     Instalaciones
@@ -136,14 +136,14 @@
                             </div>
                         </a>
                     </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="{{ url('/') }}">
+                    <li class="navigation-list-item {{ active('admin/reportes') }}">
+                        <a class="navigation-link" href="{{ route('admin.reporte.index') }}">
                             <div class="row">
                                 <div class="col-2">
-                                    <i class="fa-solid fa-file-invoice-dollar color"></i>
+                                    <i class="fa-solid fa-clipboard color"></i>
                                 </div>
                                 <div class="col-10 color">
-                                    Presupuestos
+                                    Reporte
                                 </div>
                             </div>
                         </a>
