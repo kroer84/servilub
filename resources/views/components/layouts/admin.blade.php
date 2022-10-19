@@ -124,6 +124,18 @@
                             </div>
                         </a>
                     </li>
+                    <li class="navigation-list-item {{ active('admin/Instalacion') }}">
+                        <a class="navigation-link" href="{{ route('Instalacion.index') }}">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                </div>
+                                <div class="col-10 color">
+                                    Instalaciones
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                     <li class="navigation-list-item">
                         <a class="navigation-link" href="{{ url('/') }}">
                             <div class="row">

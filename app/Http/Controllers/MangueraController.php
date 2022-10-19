@@ -42,6 +42,8 @@ class MangueraController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'identificador' => 'required',
+            'manguera' => 'required',
             'descripcion' => 'required',
             'fitting1' => 'required',
             'fitting2' => 'required',
@@ -50,13 +52,19 @@ class MangueraController extends Controller
             'proteccion' => 'required',
         ]);
         $Manguera = new Manguera;
+        $Manguera->identificador = $request->identificador;
+        $Manguera->manguera = $request->manguera;
         $Manguera->descripcion = $request->descripcion;
         $Manguera->fitting1 = $request->fitting1;
         $Manguera->fitting2 = $request->fitting2;
         $Manguera->longitud = $request->longitud;
         $Manguera->presion = $request->presion;
         $Manguera->proteccion = $request->proteccion;
-        $Manguera->Extra = $request->Extra;
+        if($request->Extra != null ){
+            $Manguera->Extra = $request->Extra;
+        }else{
+            $Manguera->Extra = 'pendiente';
+        }
         $Manguera->save();
         return redirect()->route('mangueras.index')->with('success','Manguera Creada Satisfactoriamente.');
     }
@@ -92,6 +100,8 @@ class MangueraController extends Controller
      */
     public function update(Request $request, Manguera $manguera)
     {
+        $manguera->identificador = $request->identificador;
+        $manguera->manguera = $request->manguera;
         $manguera->descripcion = $request->descripcion;
         $manguera->fitting1 = $request->fitting1;
         $manguera->fitting2 = $request->fitting2;

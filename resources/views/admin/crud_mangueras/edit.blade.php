@@ -11,24 +11,35 @@
                 {{ session('status') }}
             </div>
             @endif
-            {{-- <form action="{{ route('mangueras.store') }}" method="POST">
-                @csrf --}}
+            {{-- identificador --}}
                 <form action="{{ route('mangueras.update', $manguera->id) }}" method="POST">
                     @csrf
                     @method('PUT')
-                <div class="mb-3">
-                    <label class="form-label"><strong>Descripción</strong></label>
-                    <input type="text" class="form-control" name="descripcion" value="{{ $manguera->descripcion }}">
+
+                    <div class="row form-group">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label"><strong>Identificador Interno</strong></label>
+                        <input type="text" class="form-control" name="identificador" value="{{ $manguera->identificador }}">
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label class="form-label"><strong>Descripción</strong></label>
+                        <input type="text" class="form-control" name="descripcion" value="{{ $manguera->descripcion }}">
+                    </div>
                 </div>
 
 
                 <div class="row form-group">
 
-                    <div class="mb-3 col-md-6">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label"><strong>Manguera </strong> </label>
+                        <input type="text" class="form-control" name="manguera" value="{{ $manguera->manguera }}">
+                    </div>
+
+                    <div class="mb-3 col-md-4">
                         <label class="form-label"><strong>Fitting 1 </strong> </label>
                         <input type="text" class="form-control" name="fitting1" value="{{ $manguera->fitting1 }}">
                     </div>
-                    <div class="mb-3 col-md-6">
+                    <div class="mb-3 col-md-4">
                         <label class="form-label"><strong>Fitting 2</strong></label>
                         <input type="text" class="form-control" name="fitting2" value="{{ $manguera->fitting2 }}">
                     </div>
@@ -48,8 +59,9 @@
                     <div class="mb-3 col-md-4">
                         <label class="form-label"><strong>Protección</strong></label>
                         <select class="form-select" name="proteccion" aria-label="Default select example">
-                            <option selected value="{{ $manguera->proteccion }}">NO</option>
+                            <option selected value="{{ $manguera->proteccion }}">{{ $manguera->proteccion }}</option>
                             <option value="SI">SI</option>
+                            <option value="NO">NO</option>
                             {{-- <option value="NO">NO</option> --}}
                         </select>
                     </div>

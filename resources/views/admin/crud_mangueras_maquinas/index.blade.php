@@ -5,11 +5,11 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        Mangueras
+                        Istalaciones
                     </div>
                     <div class="col d-flex justify-content-end">
 
-                        <a href="{{ route('mangueras.create') }}">
+                        <a href="{{ route('Instalacion.create') }}">
 
                             <button type="button" class="btn btn-success rounded-circle">
                                 <i class="fa-solid fa-plus text-white"></i>
@@ -31,39 +31,41 @@
                     <tr>
                         <th class="text-center">Acciones</th>
                         <th class="text-center">ID</th>
-                        <th class="text-center">Identificador Interno</th>
+                        <th class="text-center">BMK</th>
+                        <th class="text-center">Maquina</th>
                         <th class="text-center">Manguera</th>
-                        <th class="text-center">Descripcion </td>
-                        <th class="text-center">Fitting 1 </td>
-                        <th class="text-center">Fitting 2 </td>
-                        <th class="text-center">Longitud </td>
-                        <th class="text-center">Presión </td>
-                        <th class="text-center">Protección </td>
-                        <th class="text-center">Extra </td>
+                        <th class="text-center">Fecha de Instalacion</th>
+                        <th class="text-center">Checkar [años]</th>
+                        <th class="text-center">Cambio [años]</th>
+                        <th class="text-center">Estado de la compra</th>
+                        <th class="text-center">nota</th>
+                        <th class="text-center">precio</th>
+
                         <tbody>
                     </tr>
                     @forelse($datos as $dato)
                     <tr>
                         <td class="text-center">
-                            <a class="btn btn-primary" href="{{ route('mangueras.edit',$dato->id) }}"><i
+                            <a class="btn btn-primary" href="{{route('Instalacion.edit',$dato->id)}}"><i
+                            {{-- <a class="btn btn-primary" href=" {{ url('admin/Instalacion/$dato->id/edit') }} "><i --}}
                                     class="fa-solid fa-pen"></i></a>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#modal-delete-manguera-{{ $dato->id }}">
+                                data-bs-target="#modal-delete-mangueras_maquinas-{{ $dato->id }}">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </td>
                         <td class="text-center">{{ $dato->id }}</td>
                         <td class="text-center">{{ $dato->identificador }}</td>
-                        <td class="text-center">{{ $dato->manguera }}</td>
-                        <td class="text-center">{{ $dato->descripcion }}</td>
-                        <td class="text-center">{{ $dato->fitting1 }}</td>
-                        <td class="text-center">{{ $dato->fitting2 }}</td>
-                        <td class="text-center">{{ $dato->longitud }}</td>
-                        <td class="text-center">{{ $dato->presion }}</td>
-                        <td class="text-center">{{ $dato->proteccion }}</td>
-                        <td class="">{{ $dato->Extra }}</td>
+                        <td class="text-center">{{ $dato->maquina->no_maq}}</td>
+                        <td class="text-center">{{ $dato->manguera->identificador }}</td>
+                        <td class="text-center">{{ $dato->instalacion }}</td>
+                        <td class="text-center">{{ $dato->chequeo }}</td>
+                        <td class="text-center">{{ $dato->cambio }}</td>
+                        <td class="text-center">{{ $dato->estado_compra }}</td>
+                        <td class="text-center">{{ $dato->nota }}</td>
+                        <td class="text-center">{{ $dato->precio }}</td>
                     </tr>
-                    @include('admin.crud_mangueras.delete')
+                    @include('admin.crud_mangueras_maquinas.delete')
                     @empty
                     <li>No hay Maquinas registradas.</li>
                     @endforelse

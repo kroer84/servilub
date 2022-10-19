@@ -71,6 +71,8 @@ class DatabaseSeeder extends Seeder
         $maquina->save();
 
         $manguera = new Manguera();
+        $manguera->identificador = "01";
+        $manguera->manguera = "";
         $manguera->descripcion = "MANGUERA HIDRÁULICA";
         $manguera->fitting1 = "Recta";
         $manguera->fitting2 = "90° L28";
@@ -81,6 +83,8 @@ class DatabaseSeeder extends Seeder
         $manguera->save();
 
         $manguera = new Manguera();
+        $manguera->identificador = "02";
+        $manguera->manguera = "";
         $manguera->descripcion = "MANGUERA HIDRÁULICA";
         $manguera->fitting1 = "Recta S20";
         $manguera->fitting2 = "BRIDA 45°";
@@ -91,11 +95,12 @@ class DatabaseSeeder extends Seeder
         $manguera->save();
 
         $manguera = new Manguera();
+        $manguera->identificador = "03";
         $manguera->descripcion = "MANGUERA HIDRÁULICA";
-        $manguera->fitting1 = "Recta S20";
-        $manguera->fitting2 = "BRIDA 45°";
-        $manguera->longitud = "1000";
-        $manguera->presion = "280";
+        $manguera->fitting1 = "RECTA JIC 1/2";
+        $manguera->fitting2 = "45° S16";
+        $manguera->longitud = "650";
+        $manguera->presion = "0";
         $manguera->proteccion = "No";
         $manguera->Extra = "pendiente";
         $manguera->save();

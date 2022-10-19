@@ -15,13 +15,15 @@ class CreateManguerasTable extends Migration
     {
         Schema::create('mangueras', function (Blueprint $table) {
             $table->id();
+            $table->string('identificador');
+            $table->string('manguera')->default("");
             $table->string('descripcion');
             $table->string('fitting1');
             $table->string('fitting2');
             $table->decimal('longitud');
             $table->decimal('presion');
             $table->enum('proteccion',['SI','No'])->default('NO');
-            $table->string('Extra');
+            $table->string('Extra')->default("pendiente");
             $table->timestamps();
         });
     }

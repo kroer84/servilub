@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MaquinaController;
 use App\Http\Controllers\MangueraController;
+use App\Http\Controllers\MaguerasMaquinasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,6 @@ Route::delete('/admin/users/{user}', [App\Http\Controllers\UsuarioController::cl
 Route::resource('admin/maquinas', MaquinaController::class);
 //Mangueras
 Route::resource('admin/mangueras', MangueraController::class);
+//mangueras_maquinas
+Route::resource('admin/Instalacion', MaguerasMaquinasController::class);
 

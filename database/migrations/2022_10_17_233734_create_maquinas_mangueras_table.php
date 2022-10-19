@@ -19,8 +19,9 @@ class CreateMaquinasManguerasTable extends Migration
             $table->date('instalacion');
             $table->integer('chequeo');
             $table->integer('cambio');
-            $table->enum('estado_manguera',['Instalada','Dañada','Presupuesto','Comprada'])->default('Instalada');
-            $table->enum('estado_compra',['Pedido','Entregada','Instalada','Pagada'])->default('Pedido');
+            $table->enum('estado_compra',['Instalada', 'Presupuesto', 'Pedido','Entregada','InstaladaSin'])->default('Instalada');
+            $table->string('nota');
+            $table->decimal('precio');
             $table->unsignedBigInteger('maquina_id')->unsigned();
             $table->unsignedBigInteger('manguera_id')->unsigned();
 
