@@ -24,7 +24,7 @@
                         <select name="maquina_id" id="" class="form-control">
                         <option value="">Selecciona una maquina</option>
                         @foreach ($maquinas as $maquina)
-                            <option value="{{ $maquina->id }}">{{ $maquina->no_maq }}</option>
+                            <option value="{{ $maquina->id }}">{{ $maquina->no_maq }} - {{ $maquina->des_maq }}</option>
                         @endforeach
                         </select>
                     </div>
@@ -33,7 +33,7 @@
                         <select name="manguera_id" id="" class="form-control">
                         <option value="">Selecciona una manguera</option>
                         @foreach ($mangueras as $manguera)
-                            <option value="{{ $manguera->id }}">{{ $manguera->identificador }}</option>
+                            <option value="{{ $manguera->id }}">{{ $manguera->identificador }}.- {{ $manguera->fitting1 }}, {{ $manguera->fitting1 }} de {{ $manguera->longitud }}mm</option>
                         @endforeach
                         </select>
                     </div>

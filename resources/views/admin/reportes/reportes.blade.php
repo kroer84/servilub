@@ -11,7 +11,7 @@
                 </div>
             </div>
         </h4>
-
+        <a href="{{ route('admin.reporte.export') }}">Exportar</a>
         <div class="card-body">
             @if (session('status'))
             <div class="alert alert-success" role="alert">

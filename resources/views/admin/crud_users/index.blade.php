@@ -9,8 +9,8 @@
                     </div>
                     <div class="col d-flex justify-content-end">
                             <a href="{{ route('admin.users.create') }}">
-                            <button type="button" class="btn btn-success rounded-circle">
-                                <i class="fa-solid fa-plus text-white"></i>
+                            <button type="button" class="btn btn-outline-success rounded-circle">
+                                <i class="fa-solid fa-plus"></i>
                             </button>
                         </a>
                         </div>
@@ -66,21 +66,15 @@
                             {{ $user->email }}
                         </td>
                         <td class="text-center">
-                            {{-- <button type="button" class="btn btn-success">
-                                <i class="fa-solid fa-pen"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                                <i class="fa-solid fa-trash"></i>
-                            </button> --}}
+                            <div class="btn-group" role="group" aria-label="Basic example">
 
-                            {{-- <a class="btn btn-info" href="{{ route('admin.users.show',$user->id) }}">Show</a> --}}
+                                <a class="btn btn-outline-success" href="{{ route('admin.users.edit',$user->id) }}"><i class="fa-solid fa-pen"></i></a>
 
-                            <a class="btn btn-primary" href="{{ route('admin.users.edit',$user->id) }}"><i class="fa-solid fa-pen"></i></a>
-
-                            <!-- Button trigger modal <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button> -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ $user->id }}">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
+                                <!-- Button trigger modal <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button> -->
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ $user->id }}">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
 
                         </td>
 

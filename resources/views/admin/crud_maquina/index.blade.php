@@ -9,8 +9,8 @@
                     </div>
                     <div class="col d-flex justify-content-end">
                         <a href="{{ route('maquinas.create') }}">
-                            <button type="button" class="btn btn-success rounded-circle">
-                                <i class="fa-solid fa-plus text-white"></i>
+                            <button type="button" class="btn btn-outline-success rounded-circle">
+                                <i class="fa-solid fa-plus"></i>
                             </button>
                         </a>
                     </div>
@@ -28,26 +28,30 @@
             <div class="table-responsive mt-3">
                 <table class="table table-bordered table-striped table-hover">
                     <tr>
-                        <th class="text-center">Acciones</th>
                         <th class="text-center">ID</th>
                         <th>TK - No de maq:</th>
                         <th>TK - Des de maq:</th>
-
+                        <th class="text-center">Acciones</th>
                         <tbody>
                     </tr>
                     @forelse($datos as $dato)
                     <tr>
-                        <td class="text-center">
-                            <a class="btn btn-primary" href="{{ route('maquinas.edit',$dato->id) }}"><i
-                                    class="fa-solid fa-pen"></i></a>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#modal-delete-maquina-{{ $dato->id }}">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </td>
+
                         <td class="text-center">{{ $dato->id }}</td>
                         <td>{{ $dato->no_maq }}</td>
                         <td>{{ $dato->des_maq }}</td>
+                        <td class="text-center" width="150">
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+                            <a class="btn btn-outline-success" href="{{ route('maquinas.edit',$dato->id) }}"><i
+                                    class="fa-solid fa-pen"></i></a>
+                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#modal-delete-maquina-{{ $dato->id }}">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+                        </td>
                     </tr>
                     @include('admin.crud_maquina.delete')
                     @empty

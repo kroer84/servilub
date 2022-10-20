@@ -7,15 +7,15 @@
 
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                    <h5 class="modal-title text-center" id="exampleModalLabel">ELIMINAR</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ESTA SEGURO QUE DESEA ELIMINAR EL USUARIO {{ $user->name }}
+                    ¿Está seguro que desea eliminar al usuario?:  {{ $user->name }}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i>  Eliminar</button>
                 </div>
             </div>
         </form>

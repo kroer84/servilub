@@ -30,6 +30,8 @@ class MaguerasMaquinasController extends Controller
     {
         $maquinas = Maquina::all();
         $mangueras = Manguera::all();
+        // $maquinas = Maquina::orderBy('no_maq')->get();
+        // $mangueras = Manguera::orderBy('fitting1')->get();
 
         return view('admin.crud_mangueras_maquinas.create')->with(compact('maquinas','mangueras'));
     }

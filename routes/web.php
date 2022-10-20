@@ -46,4 +46,5 @@ Route::resource('admin/mangueras', MangueraController::class);
 Route::resource('admin/Instalacion', MaguerasMaquinasController::class);
 //Reportes
 Route::get('/admin/reportes', [App\Http\Controllers\ReportesController::class, 'index'])->name('admin.reporte.index');
+Route::get('/admin/reportes/export', [App\Http\Controllers\ReportesController::class, 'export'])->name('admin.reporte.export');
 
