@@ -45,7 +45,12 @@
                     </tr>
                     @forelse($datos as $dato)
                     <tr>
-                        <td class="text-center">{{ $dato->id }}</td>
+                        <td class="text-center">
+
+                            {{ $dato->id }}
+                            {{-- {{ $MyQR = QrCode::format('svg')->size(50)->color(0,0,0)->generate($dato->identificador ) }} --}}
+
+                        </td>
                         <td class="text-center">{{ $dato->identificador }}</td>
                         <td class="text-center">{{ $dato->maquina->no_maq}}</td>
                         <td class="text-center">{{ $dato->manguera->identificador }}</td>
@@ -58,6 +63,7 @@
                         <td class="text-center" width="150">
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
 
+                                <a class="btn btn-outline-info" href="{{route('qrcode',$dato->id)}}"><i class="fa-solid fa-qrcode"></i></a>
                                 <a class="btn btn-outline-success" href="{{route('Instalacion.edit',$dato->id)}}"><i
                                 {{-- <a class="btn btn-primary" href=" {{ url('admin/Instalacion/$dato->id/edit') }} "><i --}}
                                         class="fa-solid fa-pen"></i></a>

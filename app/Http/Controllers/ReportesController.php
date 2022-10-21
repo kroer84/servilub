@@ -33,4 +33,9 @@ class ReportesController extends Controller
     //     $datos = Magueras_Maquinas::all();
     //     return view('admin.reportes.ReporteTotal', compact(['datos']));
     // }
+
+    public function qrcode($id){
+        $dato = Magueras_Maquinas::find($id);
+        return view('admin.qrCode.qrcode',compact(['dato']));
+    }
 }
