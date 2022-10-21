@@ -16,12 +16,12 @@ class CreateMaquinasManguerasTable extends Migration
         Schema::create('manguera_maquina', function (Blueprint $table) {
             $table->id();
             $table->string('identificador');
-            $table->date('instalacion');
-            $table->integer('chequeo');
-            $table->integer('cambio');
-            $table->enum('estado_compra',['Instalada', 'Presupuesto', 'Pedido','Entregada','InstaladaSin'])->default('Instalada');
+            $table->date('instalacion')->nullable(true);
+            $table->integer('chequeo')->nullable(true);
+            $table->integer('cambio')->nullable(true);
+            $table->enum('estado_compra',['Instalada', 'Presupuesto', 'Pedido','Entregada','InstaladaSin'])->default('Instalada')->nullable(true);
             $table->string('nota');
-            $table->decimal('precio');
+            $table->decimal('precio')->default(0);
             $table->unsignedBigInteger('maquina_id')->unsigned();
             $table->unsignedBigInteger('manguera_id')->unsigned();
 

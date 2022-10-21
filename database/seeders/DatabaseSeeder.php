@@ -72,16 +72,6 @@ class DatabaseSeeder extends Seeder
         $maquina->des_maq = "PRENSA 200 TONELADAS";
         $maquina->save();
 
-        $maquina = new Maquina();
-        $maquina->no_maq = "M1220";
-        $maquina->des_maq = "PRENSA 1";
-        $maquina->save();
-
-        $maquina = new Maquina();
-        $maquina->no_maq = "M1221";
-        $maquina->des_maq = "PRENSA 2";
-        $maquina->save();
-
         $manguera = new Manguera();
         $manguera->identificador = "01";
         $manguera->manguera = "";
@@ -428,6 +418,309 @@ class DatabaseSeeder extends Seeder
         $instalacion->maquina_id = 1;
         $instalacion->manguera_id = 15;
         $instalacion->save();
+
+//M1220 PRENSA 1----------------------------------------------------------------------------
+
+        $maquina = new Maquina();
+        $maquina->no_maq = "M1220";
+        $maquina->des_maq = "PRENSA 1";
+        $maquina->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "02";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR11";
+        $manguera->fitting2 = "MCHR11";
+        $manguera->longitud = 1130;
+        $manguera->presion = 275;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "13";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR11";
+        $manguera->fitting2 = "MCHR11";
+        $manguera->longitud = 1410;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "14";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1" ';
+        $manguera->fitting1 = "MCHR16";
+        $manguera->fitting2 = "MCHR16";
+        $manguera->longitud = 1550;
+        $manguera->presion = 345;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "16";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR11";
+        $manguera->fitting2 = "MCHR11";
+        $manguera->longitud = 1410;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "17";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR11";
+        $manguera->fitting2 = "MCHR11";
+        $manguera->longitud = 1410;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "18";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/4" ';
+        $manguera->fitting1 = "MCHR13";
+        $manguera->fitting2 = "MCHR13";
+        $manguera->longitud = 1410;
+        $manguera->presion = 414;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "23";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 3/4" ';
+        $manguera->fitting1 = "MCHR17";
+        $manguera->fitting2 = "MCHR17";
+        $manguera->longitud = 960;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "24";
+        $manguera->descripcion = "AGUA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR11";
+        $manguera->fitting2 = "MCHR11";
+        $manguera->longitud = 950;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "33";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 3/8" ';
+        $manguera->fitting1 = "MCHR15";
+        $manguera->fitting2 = "MCHR15";
+        $manguera->longitud = 980;
+        $manguera->presion = 330;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 02";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 16;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 13";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 17;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 14";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 18;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 16";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 19;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 17";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 20;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 18";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 21;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 23";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 22;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 24";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 23;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1220 - 33";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 2;
+        $instalacion->manguera_id = 24;
+        $instalacion->save();
+
+
+//M1221 PRENSA 2----------------------------------------------------------------------------
+        $maquina = new Maquina();
+        $maquina->no_maq = "M1221";
+        $maquina->des_maq = "PRENSA 2";
+        $maquina->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "15";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 3/4" ';
+        $manguera->fitting1 = "MCHR17";
+        $manguera->fitting2 = "MCHR17";
+        $manguera->longitud = 850;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "17";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR18";
+        $manguera->fitting2 = "MCHR18";
+        $manguera->longitud = 640;
+        $manguera->presion = 20;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $manguera = new Manguera();
+        $manguera->identificador = "18";
+        $manguera->descripcion = "MANGUERA HIDRÁULICA";
+        $manguera->manguera = ' 1/2" ';
+        $manguera->fitting1 = "MCHR11";
+        $manguera->fitting2 = "MCHR11";
+        $manguera->longitud = 2000;
+        $manguera->presion = 276;
+        $manguera->proteccion = "No";
+        $manguera->Extra = "pendiente";
+        $manguera->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1221 - 15";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 3;
+        $instalacion->manguera_id = 25;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1221 - 17";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 3;
+        $instalacion->manguera_id = 26;
+        $instalacion->save();
+
+        $instalacion = new Magueras_Maquinas;
+        $instalacion->identificador = "M1221 - 18";
+        $instalacion->instalacion = Carbon::createFromFormat('d-m-Y', '18-10-2022')->toDateTimeString();
+        $instalacion->chequeo = 4;
+        $instalacion->cambio = 4;
+        $instalacion->estado_compra = "Instalada";
+        $instalacion->nota = "";
+        // $instalacion->precio = 0;
+        $instalacion->maquina_id = 3;
+        $instalacion->manguera_id = 27;
+        $instalacion->save();
+
 
     }
 }
