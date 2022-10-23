@@ -18,4 +18,6 @@ class Magueras_Maquinas extends Model
     public function manguera(){
         return $this->belongsTo('App\Models\Manguera');
     }
+
+    
 }

@@ -38,6 +38,9 @@
                     <tr>
 
                         <td class="text-center">{{ $dato->id }}</td>
+                        <td>
+                            <a href="{{ route('maquinas.show',$dato->id) }}">{{ $dato->no_maq }}</a>
+                        </td>
                         <td>{{ $dato->no_maq }}</td>
                         <td>{{ $dato->des_maq }}</td>
                         <td class="text-center" width="150">

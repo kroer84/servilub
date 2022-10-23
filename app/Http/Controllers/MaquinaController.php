@@ -62,7 +62,7 @@ class MaquinaController extends Controller
      */
     public function show(Maquina $maquina)
     {
-        //
+        return view('admin.crud_maquina.show', compact('maquina'));
     }
 
     /**

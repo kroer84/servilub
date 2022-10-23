@@ -12,4 +12,8 @@ class Maquina extends Model
     public function mangueras(){
         return $this->belongsToMany('App\Models\Manguera');
     }
+
+    public function intalaciones(){
+        return $this->hasMany('App\Models\Magueras_Maquinas');
+    }
 }
