@@ -22,7 +22,7 @@ class ReportesController extends Controller
      */
     public function index()
     {
-        $datos = Magueras_Maquinas::all();
+        $datos = Magueras_Maquinas::orderBy('instalacion')->get();
         return view('admin.reportes.reportes',compact(['datos']));
     }
 

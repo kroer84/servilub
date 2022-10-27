@@ -86,7 +86,7 @@
                     </tr>
                         <tbody>
 
-                    @forelse($maquina->intalaciones  as $dato)
+                    @forelse($maquina->intalaciones as $dato)
                     <tr>
                         <td class="text-center">{{ $dato->identificador }}</td>
 
@@ -101,9 +101,34 @@
                         <td class="text-center">{{ $dato->manguera->proteccion }}</td>
                         <td class="text-center">{{ $dato->chequeo }}</td>
                         <td class="text-center">{{ $dato->cambio }}</td>
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}</td>
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->DiffForHumans(Carbon\Carbon::now()) }}</td>
-                        <td class="text-center"> </td>
+                        @if (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->lte(Carbon\Carbon::now()))
+                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
+                            </td>
+                        @elseif (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                            <td class="text-center bg-warning bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
+                            </td>
+                        @else
+                            <td class="text-center bg-success bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
+                            </td>
+                        @endif
+
+                        @if (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->lte(Carbon\Carbon::now()))
+                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
+                            </td>
+                        @elseif (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->lte(Carbon\Carbon::now()->addYear(1)))
+                            <td class="text-center bg-warning bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
+                            </td>
+                        @else
+                            <td class="text-center bg-success bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
+                            </td>
+                        @endif
+                        <td></td>
                         <td class="text-center">{{ $dato->nota }}</td>
                         <td class="text-center">${{ number_format($dato->precio, 2) }}</td>
                     </tr>

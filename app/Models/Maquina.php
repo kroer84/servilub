@@ -14,6 +14,6 @@ class Maquina extends Model
     }
 
     public function intalaciones(){
-        return $this->hasMany('App\Models\Magueras_Maquinas');
+        return $this->hasMany('App\Models\Magueras_Maquinas')->orderBy('instalacion');
     }
 }
