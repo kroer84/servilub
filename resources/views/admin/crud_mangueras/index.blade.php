@@ -30,7 +30,6 @@
                 <table class="table table-bordered table-striped table-hover">
                     <tr>
                         <th class="text-center">ID</th>
-                        <th class="text-center">Identificador Interno</th>
                         <th class="text-center">Manguera</th>
                         <th class="text-center">Descripcion </td>
                         <th class="text-center">Fitting 1 </td>
@@ -45,7 +44,6 @@
                     @forelse($datos as $dato)
                     <tr>
                         <td class="text-center">{{ $dato->id }}</td>
-                        <td class="text-center">{{ $dato->identificador }}</td>
                         <td class="text-center">{{ $dato->manguera }}</td>
                         <td class="text-center">{{ $dato->descripcion }}</td>
                         <td class="text-center">{{ $dato->fitting1 }}</td>
@@ -74,7 +72,7 @@
                 </table>
             </div>
 
-            {{ $datos->links() }}
+            {{-- {{ $datos->links() }} --}}
 
         </div>
     </div>

@@ -19,7 +19,7 @@ class MangueraController extends Controller
      */
     public function index()
     {
-        $datos = Manguera::orderBy('id')->paginate(10);
+        $datos = Manguera::all();
         return view('admin.crud_mangueras.index',compact(['datos']));
     }
 

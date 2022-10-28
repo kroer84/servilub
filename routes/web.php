@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MaquinaController;
 use App\Http\Controllers\MangueraController;
 use App\Http\Controllers\MaguerasMaquinasController;
+use App\Http\Controllers\UserthyssenController;
 use App\Http\Controllers\ReportesController;
 
 /*
@@ -49,3 +50,7 @@ Route::get('/admin/reportes', [App\Http\Controllers\ReportesController::class, '
 Route::get('/admin/reportes/export', [App\Http\Controllers\ReportesController::class, 'export'])->name('admin.reporte.export');
 Route::get('/qrcode/{dato}', [App\Http\Controllers\ReportesController::class, 'qrcode'])->name('qrcode');
 
+// -------------------------------------USUARIOS----------------------------------------------------------//
+
+ROUTE::get('/user/maquinas',[App\Http\Controllers\UserthyssenController::class, 'index'])->name('user.maquinas');
+ROUTE::get('/user/maquinas/{maquina}',[App\Http\Controllers\UserthyssenController::class, 'show'])->name('user.maquinas.show');

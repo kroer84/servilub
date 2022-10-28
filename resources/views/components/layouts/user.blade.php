@@ -70,8 +70,8 @@
         <div class="sidebar">
             <div class="sidebar-body">
                 <ul class="navigation-list">
-                    <li class="navigation-list-item active">
-                        <a class="navigation-link" href="{{ url('/') }}">
+                    <li class="navigation-list-item {{ active('thyssenkrupp/home') }}">
+                        <a class="navigation-link" href="{{ route('user.home') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-house color"></i>
@@ -82,14 +82,14 @@
                             </div>
                         </a>
                     </li>
-                    <li class="navigation-list-item">
-                        <a class="navigation-link" href="{{ url('/') }}">
+                    <li class="navigation-list-item {{ active('user/maquinas') }}">
+                        <a class="navigation-link" href="{{ route('user.maquinas') }}">
                             <div class="row">
                                 <div class="col-2">
-                                    <i class="fa-solid fa-file-invoice-dollar color"></i>
+                                    <i class="fa-solid fa-robot color"></i>
                                 </div>
                                 <div class="col-10 color">
-                                    Presupuestos
+                                    Maquinas
                                 </div>
                             </div>
                         </a>
@@ -100,7 +100,7 @@
                     <p class="teams-title color">Reportes</p>
                 </div>
                 <ul class="teams-list">
-                    <li class="teams-list-item active">
+                    <li class="teams-list-item">
                         <a class="navigation-link" href="#">
                             <div class="row">
                                 <div class="col-2">

@@ -1,4 +1,5 @@
-<x-layouts.admin>
+<x-layouts.user>
+
     <div class="card">
         <h4>
             <div class="card-header">
@@ -25,7 +26,7 @@
                         </th>
                     </tr>
                     <tr>
-                        <th width="150">
+                        <th class="size">
                             TK-No de maq.:
                         </th>
                         <th class="text-start" colspan="3">
@@ -39,7 +40,7 @@
                         </th>
                     </tr>
                     <tr>
-                        <th width="150">
+                        <th>
                             TK-Des de maq:
                         </th>
                         <th class="text-start" colspan="3">
@@ -53,7 +54,7 @@
                         </th>
                     </tr>
                     <tr>
-                        <th rowspan="2" width="150">BMK</th>
+                        <th rowspan="2">BMK</th>
                         <th colspan="2">Módulo</th>
                         <th colspan="1">Fecha</th>
                         <th colspan="4">Tipo y asamblea</th>
@@ -88,16 +89,11 @@
 
                     @forelse($maquina->intalaciones as $dato)
                     <tr>
-                        <td class="text-center" width="150">{{ $dato->identificador }}</td>
+                        <td class="text-center">{{ $dato->identificador }}</td>
 
                         <td class="text-center"> </td>
                         <td class="text-center">{{ $dato->manguera->descripcion }}</td>
-                        @if ($dato->instalacion != null)
-                            <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}</td>
-                        @else
-                            <td></td>
-                        @endif
-
+                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}</td>
                         <td class="text-center">{{ $dato->manguera->manguera}}</td>
                         <td class="text-center">{{ $dato->manguera->fitting1 }}</td>
                         <td class="text-center">{{ $dato->manguera->fitting2 }}</td>
@@ -106,9 +102,6 @@
                         <td class="text-center">{{ $dato->manguera->proteccion }}</td>
                         <td class="text-center">{{ $dato->chequeo }}</td>
                         <td class="text-center">{{ $dato->cambio }}</td>
-                        @if ($dato->instalacion != null)
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}</td>
-
                         @if (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->lte(Carbon\Carbon::now()))
                             <td class="text-center alert alert-danger bg-danger bg-opacity-25">
                                 {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
@@ -136,10 +129,6 @@
                                 {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
                             </td>
                         @endif
-                        @else
-                        <td></td>
-                        <td></td>
-                    @endif
                         <td></td>
                         <td class="text-center">{{ $dato->nota }}</td>
                         <td class="text-center">${{ number_format($dato->precio, 2) }}</td>
@@ -152,4 +141,5 @@
         </div>
     </div>
 
-</x-layouts.admin>
+</x-layouts.user>
+

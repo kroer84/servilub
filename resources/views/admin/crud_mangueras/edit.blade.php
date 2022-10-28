@@ -17,29 +17,24 @@
                     @method('PUT')
 
                     <div class="row form-group">
-                    <div class="mb-3 col-md-4">
-                        <label class="form-label"><strong>Identificador Interno</strong></label>
-                        <input type="text" class="form-control" name="identificador" value="{{ $manguera->identificador }}">
-                    </div>
-                    <div class="mb-3 col-md-8">
+                    <div class="mb-3 col-md-6">
                         <label class="form-label"><strong>Descripción</strong></label>
                         <input type="text" class="form-control" name="descripcion" value="{{ $manguera->descripcion }}">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label"><strong>Manguera </strong> </label>
+                        <input type="text" class="form-control" name="manguera" value="{{ $manguera->manguera }}">
                     </div>
                 </div>
 
 
                 <div class="row form-group">
 
-                    <div class="mb-3 col-md-4">
-                        <label class="form-label"><strong>Manguera </strong> </label>
-                        <input type="text" class="form-control" name="manguera" value="{{ $manguera->manguera }}">
-                    </div>
-
-                    <div class="mb-3 col-md-4">
+                    <div class="mb-3 col-md-6">
                         <label class="form-label"><strong>Fitting 1 </strong> </label>
                         <input type="text" class="form-control" name="fitting1" value="{{ $manguera->fitting1 }}">
                     </div>
-                    <div class="mb-3 col-md-4">
+                    <div class="mb-3 col-md-6">
                         <label class="form-label"><strong>Fitting 2</strong></label>
                         <input type="text" class="form-control" name="fitting2" value="{{ $manguera->fitting2 }}">
                     </div>
