@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Maquina;
+use App\Models\Magueras_Maquinas;
 use Illuminate\Http\Request;
 
 class UserthyssenController extends Controller
@@ -21,5 +22,16 @@ class UserthyssenController extends Controller
     public function show(Maquina $maquina)
     {
         return view('user.user_maquina.show', compact('maquina'));
+    }
+
+    public function fechas()
+    {
+        return view('user.reportes.reporte_fechas');
+    }
+    public function guardar(Request $request)
+    {
+        $datos = Magueras_Maquinas::all()->where('fechaCambio', '>=', $request->get('FechaInit'))->where('fechaCambio', '<=', $request->get('FechaFin'));
+
+        return view('user.reportes.show', compact('datos'));
     }
 }

@@ -100,8 +100,8 @@
                     <p class="teams-title color">Reportes</p>
                 </div>
                 <ul class="teams-list">
-                    <li class="teams-list-item">
-                        <a class="navigation-link" href="#">
+                    <li class="teams-list-item {{ active('user/reporte/fechas') }}">
+                        <a class="navigation-link" href="{{ route('user.reporte.fechas') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-file" style="color: blue"></i>

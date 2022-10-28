@@ -55,3 +55,6 @@ Route::get('/qrcode/{dato}', [App\Http\Controllers\ReportesController::class, 'q
 
 ROUTE::get('/user/maquinas',[App\Http\Controllers\UserthyssenController::class, 'index'])->name('user.maquinas');
 ROUTE::get('/user/maquinas/{maquina}',[App\Http\Controllers\UserthyssenController::class, 'show'])->name('user.maquinas.show');
+
+ROUTE::get('/user/reporte/fechas',[App\Http\Controllers\UserthyssenController::class, 'fechas'])->name('user.reporte.fechas');
+ROUTE::post('/user/reporte/guardar',[App\Http\Controllers\UserthyssenController::class, 'guardar'])->name('user.reporte.guardar');
