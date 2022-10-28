@@ -36,6 +36,7 @@
                         <th class="text-center">Fecha de Instalacion</th>
                         <th class="text-center">Checkar [años]</th>
                         <th class="text-center">Cambio [años]</th>
+                        <th class="text-center"WIDTH="100">fecha de Cambio</th>
                         <th class="text-center">Estado de la compra</th>
                         <th class="text-center">nota</th>
                         <th class="text-center">precio</th>
@@ -53,10 +54,45 @@
                         </td>
                         <td class="text-center">{{ $dato->identificador }}</td>
                         <td class="text-center">{{ $dato->maquina->no_maq}}</td>
-                        <td class="text-center">{{ $dato->manguera->identificador }}</td>
+                        <td class="text-center">{{ $dato->manguera->manguera }}</td>
                         <td class="text-center">{{ $dato->instalacion }}</td>
                         <td class="text-center">{{ $dato->chequeo }}</td>
-                        <td class="text-center">{{ $dato->cambio }}</td>
+
+                        @if ($dato->instalacion != null)
+
+                        @if(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()))
+                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                            </td>
+                        @elseif(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                            <td class="text-center bg-warning bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                            </td>
+                        @else
+                            <td class="text-center bg-success bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                            </td>
+                        @endif
+
+                        @if(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()))
+                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                            </td>
+                        @elseif(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                            <td class="text-center bg-warning bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                            </td>
+                        @else
+                            <td class="text-center bg-success bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                            </td>
+                        @endif
+
+                    @else
+                        <td></td>
+                        <td></td>
+                    @endif
+
                         <td class="text-center">{{ $dato->estado_compra }}</td>
                         <td class="text-center">{{ $dato->nota }}</td>
                         <td class="text-center">{{ $dato->precio }}</td>
@@ -82,7 +118,7 @@
                 </table>
             </div>
 
-            {{ $datos->links() }}
+            {{-- {{ $datos->links() }} --}}
 
         </div>
     </div>

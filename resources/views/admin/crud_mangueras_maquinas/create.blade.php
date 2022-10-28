@@ -33,7 +33,7 @@
                         <select name="manguera_id" id="" class="form-control">
                         <option value="">Selecciona una manguera</option>
                         @foreach ($mangueras as $manguera)
-                            <option value="{{ $manguera->id }}">{{ $manguera->identificador }}.- {{ $manguera->fitting1 }}, {{ $manguera->fitting1 }} de {{ $manguera->longitud }}mm</option>
+                            <option value="{{ $manguera->id }}">{{ $manguera->descripcion }} - {{ $manguera->fitting1 }} - {{ $manguera->fitting1 }} - {{ $manguera->longitud }} mm - {{ $manguera->presion }} bar</option>
                         @endforeach
                         </select>
                     </div>
@@ -66,8 +66,10 @@
                             <option value="Instalada">Instalada</option>
                             <option value="Presupuesto">Presupuestada</option>
                             <option value="Pedido">Pedido</option>
-                            <option value="Entregada">Entregada</option>
-                            <option value="InstaladaSin">Instalada sin pagar </option>
+                            <option value="Almacen">Almacen</option>
+                            <option value="Cambio">Cambio</option>
+                            <option value="Desmontar">Desmontar </option>
+                            <option value="Mejora">Mejora </option>
                             {{-- <option value="NO">NO</option> --}}
                         </select>
                     </div>

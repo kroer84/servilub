@@ -11,7 +11,9 @@
                 </div>
             </div>
         </h4>
-        <a href="{{ route('admin.reporte.export') }}">Exportar</a>
+
+
+        <a class="btn btn-success" href="{{ route('admin.reporte.export') }}"><i class="fa-solid fa-file-excel"></i> Exportar</a>
         <div class="card-body">
             @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -20,27 +22,7 @@
             @endif
             <div class="table-responsive mt-3">
                 <table class="table table-bordered text-center align-middle">
-                    {{-- <tr>
-                        <th class="text-start" colspan="10">
-                            Plan de control de mantenimiento para mangeras hidráulicos assemblados
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            TK - No de maq.:
-                        </th>
-                        <th class="text-start" colspan="3">
-                            {{ $dato->maquina->no_maq }}
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            TK - Des de maq:
-                        </th>
-                        <th class="text-start" colspan="3">
-                            {{ $dato->maquina->des_maq }}
-                        </th>
-                    </tr> --}}
+
                     <tr>
                         <th rowspan="2">BMK</th>
                         <th colspan="2">Módulo</th>
@@ -88,9 +70,45 @@
                         <td class="text-center">{{ $dato->manguera->presion }}</td>
                         <td class="text-center">{{ $dato->manguera->proteccion }}</td>
                         <td class="text-center">{{ $dato->chequeo }}</td>
-                        <td class="text-center">{{ $dato->cambio }}</td>
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}</td>
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->DiffForHumans(Carbon\Carbon::now()) }}</td>
+
+                        @if ($dato->instalacion != null)
+
+                        @if(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()))
+                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                            </td>
+                        @elseif(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                            <td class="text-center bg-warning bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                            </td>
+                        @else
+                            <td class="text-center bg-success bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                            </td>
+                        @endif
+
+                        @if(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()))
+                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                            </td>
+                        @elseif(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                            <td class="text-center bg-warning bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                            </td>
+                        @else
+                            <td class="text-center bg-success bg-opacity-25">
+                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                            </td>
+                        @endif
+
+                    @else
+                        <td></td>
+                        <td></td>
+                    @endif
+
+
+
+                        <td class="text-center"> </td>
                         <td class="text-center"> </td>
                         <td class="text-center">{{ $dato->nota }}</td>
                         <td class="text-center">${{ number_format($dato->precio, 2) }}</td>

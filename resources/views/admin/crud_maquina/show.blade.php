@@ -10,7 +10,7 @@
                 </div>
             </div>
         </h4>
-        <a href="{{ route('admin.reporte.export') }}">Exportar</a>
+
         <div class="card-body">
             @if (session('status'))
             <div class="alert alert-success" role="alert">
@@ -84,69 +84,72 @@
                         <th scope="col">[fecha]</th>
                         <th scope="col">[nombre]</th>
                     </tr>
-                        <tbody>
+                    <tbody>
 
-                    @forelse($maquina->intalaciones as $dato)
-                    <tr>
-                        <td class="text-center" width="150">{{ $dato->identificador }}</td>
+                        @forelse($maquina->intalaciones as $dato)
+                        <tr>
+                            <td class="text-center" width="150">{{ $dato->identificador }}</td>
 
-                        <td class="text-center"> </td>
-                        <td class="text-center">{{ $dato->manguera->descripcion }}</td>
-                        @if ($dato->instalacion != null)
-                            <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}</td>
-                        @else
+                            <td class="text-center"> </td>
+                            <td class="text-center">{{ $dato->manguera->descripcion }}</td>
+                            @if ($dato->instalacion != null)
+                            <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}
+                            </td>
+                            @else
                             <td></td>
-                        @endif
+                            @endif
 
-                        <td class="text-center">{{ $dato->manguera->manguera}}</td>
-                        <td class="text-center">{{ $dato->manguera->fitting1 }}</td>
-                        <td class="text-center">{{ $dato->manguera->fitting2 }}</td>
-                        <td class="text-center">{{ $dato->manguera->longitud }}</td>
-                        <td class="text-center">{{ $dato->manguera->presion }}</td>
-                        <td class="text-center">{{ $dato->manguera->proteccion }}</td>
-                        <td class="text-center">{{ $dato->chequeo }}</td>
-                        <td class="text-center">{{ $dato->cambio }}</td>
-                        @if ($dato->instalacion != null)
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}</td>
+                            <td class="text-center">{{ $dato->manguera->manguera}}</td>
+                            <td class="text-center">{{ $dato->manguera->fitting1 }}</td>
+                            <td class="text-center">{{ $dato->manguera->fitting2 }}</td>
+                            <td class="text-center">{{ $dato->manguera->longitud }}</td>
+                            <td class="text-center">{{ $dato->manguera->presion }}</td>
+                            <td class="text-center">{{ $dato->manguera->proteccion }}</td>
+                            <td class="text-center">{{ $dato->cambio }}</td>
 
-                        @if (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->lte(Carbon\Carbon::now()))
-                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
-                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
-                            </td>
-                        @elseif (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->lte(Carbon\Carbon::now()->addYear(1)))
-                            <td class="text-center bg-warning bg-opacity-25">
-                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
-                            </td>
-                        @else
-                            <td class="text-center bg-success bg-opacity-25">
-                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('m/Y')}}
-                            </td>
-                        @endif
+                            @if ($dato->instalacion != null)
 
-                        @if (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->lte(Carbon\Carbon::now()))
-                            <td class="text-center alert alert-danger bg-danger bg-opacity-25">
-                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
-                            </td>
-                        @elseif (\Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->lte(Carbon\Carbon::now()->addYear(1)))
-                            <td class="text-center bg-warning bg-opacity-25">
-                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
-                            </td>
-                        @else
-                            <td class="text-center bg-success bg-opacity-25">
-                                {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->chequeo)->longRelativeDiffForHumans(Carbon\Carbon::now()) }}
-                            </td>
-                        @endif
-                        @else
-                        <td></td>
-                        <td></td>
-                    @endif
-                        <td></td>
-                        <td class="text-center">{{ $dato->nota }}</td>
-                        <td class="text-center">${{ number_format($dato->precio, 2) }}</td>
-                    </tr>
-                    @empty
-                    <li>No hay Maquinas registradas.</li>
-                    @endforelse
+                                @if(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()))
+                                    <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                        {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                                    </td>
+                                @elseif(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                                    <td class="text-center bg-warning bg-opacity-25">
+                                        {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                                    </td>
+                                @else
+                                    <td class="text-center bg-success bg-opacity-25">
+                                        {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->format('Y')}}
+                                    </td>
+                                @endif
+
+                                @if(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()))
+                                    <td class="text-center alert alert-danger bg-danger bg-opacity-25">
+                                        {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                                    </td>
+                                @elseif(\Carbon\Carbon::parse($dato->fechaCambio)->lte(Carbon\Carbon::now()->addYear(1)))
+                                    <td class="text-center bg-warning bg-opacity-25">
+                                        {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                                    </td>
+                                @else
+                                    <td class="text-center bg-success bg-opacity-25">
+                                        {{ \Carbon\Carbon::parse($dato->instalacion)->addYears($dato->cambio)->isoFormat('MMMM/Y')}}
+                                    </td>
+                                @endif
+
+                            @else
+                                <td></td>
+                                <td></td>
+                            @endif
+
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">{{ $dato->nota }}</td>
+                            <td class="text-center">${{ number_format($dato->precio, 2) }}</td>
+                        </tr>
+                        @empty
+                        <li>No hay Maquinas registradas.</li>
+                        @endforelse
                 </table>
             </div>
         </div>

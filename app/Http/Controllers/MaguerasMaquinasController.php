@@ -17,7 +17,7 @@ class MaguerasMaquinasController extends Controller
      */
     public function index()
     {
-        $datos = Magueras_Maquinas::orderBy('id')->paginate(10);
+        $datos = Magueras_Maquinas::orderBy('instalacion', 'DESC')->get();
         return view('admin.crud_mangueras_maquinas.index',compact(['datos']));
     }
 

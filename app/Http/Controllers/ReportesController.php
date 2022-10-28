@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\Reporte;
 use Illuminate\Http\Request;
 use App\Models\Magueras_Maquinas;
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ReportesController extends Controller
@@ -22,7 +23,9 @@ class ReportesController extends Controller
      */
     public function index()
     {
-        $datos = Magueras_Maquinas::orderBy('instalacion')->get();
+        // $datos = DB::table('manguera_maquina')->where('estado_compra', '=', 'Cambio')->get();
+        // dd($datos);
+        $datos = Magueras_Maquinas::whereIn('estado_compra', ['Cambio','Almacen'])->orderBy('identificador','DESC')->get();
         return view('admin.reportes.reportes',compact(['datos']));
     }
 

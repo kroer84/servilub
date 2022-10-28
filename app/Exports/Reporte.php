@@ -10,7 +10,7 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 class Reporte implements FromView, ShouldAutoSize{
     public function view(): View
     {
-        $datos = Magueras_Maquinas::all();
+        $datos = Magueras_Maquinas::whereIn('estado_compra', ['Cambio','Almacen'])->orderBy('identificador','DESC')->get();
         return view('admin.reportes.ReporteTotal', compact(['datos']));
     }
 }

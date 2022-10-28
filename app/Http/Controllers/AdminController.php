@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use App\Models\Magueras_Maquinas;
 
 class AdminController extends Controller
 {
@@ -14,7 +15,8 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.home');
+        $datos = Magueras_Maquinas::whereIn('estado_compra', ['Cambio','Almacen'])->orderBy('identificador','DESC')->get();
+        return view('admin.home',compact(['datos']));
     }
 
 }
