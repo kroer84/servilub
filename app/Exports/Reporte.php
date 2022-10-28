@@ -14,3 +14,5 @@ class Reporte implements FromView, ShouldAutoSize{
         return view('admin.reportes.ReporteTotal', compact(['datos']));
     }
 }
+
+

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Magueras_Maquinas;
 
 class UserController extends Controller
 {
@@ -13,7 +14,9 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('thyssenkrupp.home');
+        $datos = Magueras_Maquinas::whereIn('estado_compra', ['Cambio','Almacen'])->orderBy('identificador','DESC')->get();
+
+        return view('thyssenkrupp.home',compact(['datos']));
     }
 
     public function info()

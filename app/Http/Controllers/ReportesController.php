@@ -23,8 +23,6 @@ class ReportesController extends Controller
      */
     public function index()
     {
-        // $datos = DB::table('manguera_maquina')->where('estado_compra', '=', 'Cambio')->get();
-        // dd($datos);
         $datos = Magueras_Maquinas::whereIn('estado_compra', ['Cambio','Almacen'])->orderBy('identificador','DESC')->get();
         return view('admin.reportes.reportes',compact(['datos']));
     }
@@ -32,6 +30,7 @@ class ReportesController extends Controller
     public function export(){
         return Excel::download(new Reporte, 'Reporte.xlsx');
     }
+
     // public function export(){
     //     $datos = Magueras_Maquinas::all();
     //     return view('admin.reportes.ReporteTotal', compact(['datos']));
