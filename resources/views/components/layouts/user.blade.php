@@ -35,7 +35,7 @@
                 <div class="sidebar-header">
                     <div class="sidebar-logo-container">
                         <div class="logo-container">
-                            <img class="logo-sidebar" alt="logo" src="{{ asset('img/logo.png') }}" />
+                            <img class="logo-sidebar" alt="logo" src="{{ asset('img/logo.png') }}"/>
                         </div>
                         <div class="brand-name-container">
                             <div class="brand-name">
@@ -47,7 +47,7 @@
             </a>
             <ul>
                 @auth
-                    <div class="dropdown">
+                    <div class="dropdown nameuser">
                         {{ Auth::user()->name }}
                         <span class="fa-solid fa-circle-chevron-down margen-der color"></span>
                         <div class="dropdown-content">

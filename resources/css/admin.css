@@ -308,3 +308,48 @@ hr.style9 {
     width: 500px;
     overflow: auto;
 }
+
+
+    @media only screen and (max-width: 576px) {
+
+        .sidebar-logo-container {
+            background-color:   #42440d;
+            border-radius: 10px;
+            display: flex;
+            min-width: 45px;
+        }
+
+        .brand-name-container{
+            padding: 0px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            display: none;
+        }
+
+        .brand-name1{
+            color:  #648240;
+            margin: 0px;
+            line-height: 2rem;
+            font-size: 22px;
+            font-weight: 900;
+            text-decoration: none;
+            display: none;
+        }
+        .brand-name2{
+            color:  #bdba4d;
+            margin: 0px;
+            line-height: 2rem;
+            font-size: 22px;
+            font-weight: 900;
+            text-decoration: none;
+            display: none;
+
+        }
+        .nameuser{
+            font-size: 10px;
+        }
+
+    }
+
+

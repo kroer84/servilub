@@ -47,6 +47,7 @@ body{
 
 .sidebar-header{
     padding: 4px 0px 3px 0px;
+
 }
 
 .sidebar-logo-container {
@@ -279,3 +280,22 @@ hr.style9 {
 }
 
 
+@media only screen and (max-width: 576px) {
+
+
+    .logo-container{
+        max-width: 45px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+
+
+    }
+
+    .brand-name{
+        display: none;
+    }
+    .nameuser{
+        font-size: 11px;
+    }
+
+}

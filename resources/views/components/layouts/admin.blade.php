@@ -53,7 +53,7 @@
             </a>
             <ul>
                 @auth
-                <div class="dropdown">
+                <div class="dropdown nameuser">
                     {{ Auth::user()->name }}
                     <span class="fa-solid fa-circle-chevron-down margen-der color"></span>
                     <div class="dropdown-content">
