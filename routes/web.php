@@ -58,3 +58,9 @@ ROUTE::get('/user/maquinas/{maquina}',[App\Http\Controllers\UserthyssenControlle
 
 ROUTE::get('/user/reporte/fechas',[App\Http\Controllers\UserthyssenController::class, 'fechas'])->name('user.reporte.fechas');
 ROUTE::post('/user/reporte/guardar',[App\Http\Controllers\UserthyssenController::class, 'guardar'])->name('user.reporte.guardar');
+
+ROUTE::get('/user/reporte/mensual',[App\Http\Controllers\UserthyssenController::class, 'mensual'])->name('user.reporte.mensual');
+ROUTE::get('/user/reporte/bimestral',[App\Http\Controllers\UserthyssenController::class, 'bimestral'])->name('user.reporte.bimestral');
+ROUTE::get('/user/reporte/trimestral',[App\Http\Controllers\UserthyssenController::class, 'trimestral'])->name('user.reporte.trimestral');
+ROUTE::get('/user/reporte/semestral',[App\Http\Controllers\UserthyssenController::class, 'semestral'])->name('user.reporte.semestral');
+ROUTE::get('/user/reporte/anual',[App\Http\Controllers\UserthyssenController::class, 'anual'])->name('user.reporte.anual');

@@ -112,8 +112,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="teams-list-item">
-                        <a class="navigation-link" href="#">
+                    <li class="teams-list-item {{ active('user/reporte/mensual') }}">
+                        <a class="navigation-link" href="{{ route('user.reporte.mensual') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-file" style="color: red"></i>
@@ -124,8 +124,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="teams-list-item">
-                        <a class="navigation-link" href="#">
+                    <li class="teams-list-item {{ active('user/reporte/bimestral') }}">
+                        <a class="navigation-link" href="{{ route('user.reporte.bimestral') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-file" style="color: orange"></i>
@@ -136,8 +136,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="teams-list-item">
-                        <a class="navigation-link" href="#">
+                    <li class="teams-list-item {{ active('user/reporte/trimestral') }}">
+                        <a class="navigation-link" href="{{ route('user.reporte.trimestral') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-file" style="color: rgb(252, 227, 0)"></i>
@@ -148,8 +148,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="teams-list-item">
-                        <a class="navigation-link" href="#">
+                    <li class="teams-list-item {{ active('user/reporte/semestral') }}">
+                        <a class="navigation-link" href="{{ route('user.reporte.semestral') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-file" style="color: rgb(16, 154, 178)"></i>
@@ -160,8 +160,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="teams-list-item">
-                        <a class="navigation-link" href="#">
+                    <li class="teams-list-item {{ active('user/reporte/anual') }}">
+                        <a class="navigation-link" href="{{ route('user.reporte.anual') }}">
                             <div class="row">
                                 <div class="col-2">
                                     <i class="fa-solid fa-file" style="color: green"></i>

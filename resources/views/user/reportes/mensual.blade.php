@@ -12,7 +12,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col text-center">
-                        Reporte hasta el {{ \Carbon\Carbon::parse($fechaFin)->isoFormat('D MMMM Y') }}
+                        Reporte por fechas
                     </div>
 
                 </div>
@@ -20,10 +20,13 @@
         </h4>
 
         <div class="card-body">
-
-
+            @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+            @endif
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class=" d-grid gap-2 btn-block">
                     <button id="btnExportar" class="btn btn-success">
                 <i class="fas fa-file-excel"></i> Exportar datos a Excel
@@ -31,11 +34,11 @@
                     </div>
 
                 </div>
-                {{-- <div class="col-md-6">
-            <div class="d-grid gap-2 btn-block">
+                <div class="col-md-6">
+            {{-- <div class="d-grid gap-2 btn-block">
                 <a href="#" class="btn btn-info"><i class="fa-solid fa-file-pdf"></i> Descarga PDF</a>
-            </div>
-                </div> --}}
+            </div> --}}
+                </div>
             </div>
 
 
@@ -83,11 +86,7 @@
 
                     </tr>
                     @empty
-                    <div class="text-center">
-                        <h3>
-                            No hay registros
-                        </h3>
-                    </div>
+                    <li>No hay Maquinas registradas.</li>
                     @endforelse
                     {{-- <tfoot>
                         <td colspan="4"><h3>Total:</h3> </td>
