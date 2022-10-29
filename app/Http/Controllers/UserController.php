@@ -15,8 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $datos = Magueras_Maquinas::whereIn('estado_compra', ['Cambio','Almacen'])->orderBy('identificador','DESC')->get();
-
-        return view('thyssenkrupp.home',compact(['datos']));
+        return view('thyssenkrupp.home',compact('datos'));
     }
 
     public function info()
