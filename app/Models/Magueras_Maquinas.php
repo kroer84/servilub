@@ -19,5 +19,5 @@ class Magueras_Maquinas extends Model
         return $this->belongsTo('App\Models\Manguera');
     }
 
-    
+
 }
