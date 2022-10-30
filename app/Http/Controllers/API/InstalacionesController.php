@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Magueras_Maquinas;
 use App\Models\Manguera;
 use App\Models\Maquina;
+use PhpParser\ErrorHandler\Collecting;
+
 
 class InstalacionesController extends Controller
 {
@@ -39,7 +41,7 @@ class InstalacionesController extends Controller
      */
     public function show($id)
     {
-        $instalacion = Magueras_Maquinas::where('identificador', $id)->get();
+        $instalacion = Magueras_Maquinas::where('identificador', $id)->select(['identificador', 'instalacion','fechaCambio','nota'])->get();
 
         if($instalacion->isEmpty()){
             return response()->json([
@@ -47,9 +49,13 @@ class InstalacionesController extends Controller
                 'error' => 'Codigo no encontrado'
             ]);
         }else{
+            $maquina = Magueras_Maquinas::where('identificador', $id)->first()->maquina;
+            $manguera = Magueras_Maquinas::where('identificador', $id)->first()->manguera;
             return response()->json([
                 'res' => true,
-                'data' => $instalacion
+                'instalacion' => $instalacion,
+                'maquina' => $maquina,
+                'manguera' => $manguera
             ]);
         }
 
