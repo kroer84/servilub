@@ -39,7 +39,20 @@ class InstalacionesController extends Controller
      */
     public function show($id)
     {
-        //
+        $instalacion = Magueras_Maquinas::where('identificador', $id)->get();
+
+        if($instalacion->isEmpty()){
+            return response()->json([
+                'res' => false,
+                'error' => 'Codigo no encontrado'
+            ]);
+        }else{
+            return response()->json([
+                'res' => true,
+                'data' => $instalacion
+            ]);
+        }
+
     }
 
     /**
