@@ -9,6 +9,7 @@ use App\Models\Manguera;
 use App\Models\Maquina;
 use PhpParser\ErrorHandler\Collecting;
 
+use function PHPSTORM_META\type;
 
 class InstalacionesController extends Controller
 {
@@ -41,21 +42,37 @@ class InstalacionesController extends Controller
      */
     public function show($id)
     {
-        $instalacion = Magueras_Maquinas::where('identificador', $id)->select(['identificador', 'instalacion','fechaCambio','nota'])->get();
+        $identificador = Magueras_Maquinas::where('identificador', $id)->first();
+        // dd($identificador);
 
-        if($instalacion->isEmpty()){
+        if($identificador == null){
             return response()->json([
                 'res' => false,
-                'error' => 'Codigo no encontrado'
+                'mensaje' => 'Codigo no encontrado'
             ]);
         }else{
+            $instalacion = Magueras_Maquinas::findOrfail($identificador->id);
             $maquina = Magueras_Maquinas::where('identificador', $id)->first()->maquina;
             $manguera = Magueras_Maquinas::where('identificador', $id)->first()->manguera;
             return response()->json([
                 'res' => true,
-                'instalacion' => $instalacion,
-                'maquina' => $maquina,
-                'manguera' => $manguera
+                'mensaje' => 'Codigo Encontrado',
+                'identificador' => $instalacion->identificador,
+                'instalacion' => $instalacion->instalacion,
+                'chequeo' => $instalacion->chequeo,
+                'cambio' => $instalacion->cambio,
+                'fechaCambio' => $instalacion->fechaCambio,
+                'estado_compra' => $instalacion->estado_compra,
+                'nota' => $instalacion->nota,
+                'no_maq' => $maquina->no_maq,
+                'des_maq' => $maquina->des_maq,
+                'manguera' => $manguera->manguera,
+                'descripcion' => $manguera->descripcionNGUERA,
+                'fitting1' => $manguera->fitting1,
+                'fitting2' => $manguera->fitting2,
+                'longitud' => $manguera->longitud,
+                'presion' => $manguera->presion,
+                'proteccion' => $manguera->proteccion,
             ]);
         }
 
