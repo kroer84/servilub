@@ -762,14 +762,14 @@ $manguera->save();
 //---------------------------------------INSTALACIONES----------------------------------------
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 01";
+        $instalacion->identificador = "M1220-01";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 23;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 02";
+        $instalacion->identificador = "M1220-02";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -777,77 +777,77 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 03";
+        $instalacion->identificador = "M1220-03";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 20;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 04";
+        $instalacion->identificador = "M1220-04";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 33;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 05";
+        $instalacion->identificador = "M1220-05";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 37;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 06";
+        $instalacion->identificador = "M1220-06";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 34;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 07";
+        $instalacion->identificador = "M1220-07";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 28;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 08";
+        $instalacion->identificador = "M1220-08";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 52;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 09";
+        $instalacion->identificador = "M1220-09";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 53;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 10";
+        $instalacion->identificador = "M1220-10";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 51;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 11";
+        $instalacion->identificador = "M1220-11";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 47;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 12";
+        $instalacion->identificador = "M1220-12";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 47;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 13";
+        $instalacion->identificador = "M1220-13";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -855,7 +855,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 14";
+        $instalacion->identificador = "M1220-14";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -863,14 +863,14 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 15";
+        $instalacion->identificador = "M1220-15";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 38;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 16";
+        $instalacion->identificador = "M1220-16";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -878,7 +878,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 17";
+        $instalacion->identificador = "M1220-17";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -886,7 +886,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 18";
+        $instalacion->identificador = "M1220-18";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -894,35 +894,35 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 19";
+        $instalacion->identificador = "M1220-19";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 35;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 20";
+        $instalacion->identificador = "M1220-20";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 31;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 21";
+        $instalacion->identificador = "M1220-21";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 36;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 22";
+        $instalacion->identificador = "M1220-22";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 32;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 23";
+        $instalacion->identificador = "M1220-23";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -930,7 +930,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 24";
+        $instalacion->identificador = "M1220-24";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -938,56 +938,56 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 25";
+        $instalacion->identificador = "M1220-25";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 6;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 26";
+        $instalacion->identificador = "M1220-26";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 6;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 27";
+        $instalacion->identificador = "M1220-27";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 4;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 28";
+        $instalacion->identificador = "M1220-28";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 5;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 29";
+        $instalacion->identificador = "M1220-29";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 5;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 30";
+        $instalacion->identificador = "M1220-30";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 29;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 31";
+        $instalacion->identificador = "M1220-31";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 19;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 32";
+        $instalacion->identificador = "M1220-32";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 3 ;
@@ -995,7 +995,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 33";
+        $instalacion->identificador = "M1220-33";
         $instalacion->nota = "MANGUERA EN ALMACEN PENDIENTE DE CAMBIO";
         $instalacion->estado_compra = "Almacen";
         $instalacion->maquina_id = 3 ;
@@ -1003,21 +1003,21 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 34";
+        $instalacion->identificador = "M1220-34";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 13;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 35";
+        $instalacion->identificador = "M1220-35";
         $instalacion->nota = "";
         $instalacion->maquina_id = 3 ;
         $instalacion->manguera_id = 18;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1220 - 36";
+        $instalacion->identificador = "M1220-36";
         $instalacion->nota = "REQUIERE  CAMBIO";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 3 ;
@@ -1026,63 +1026,63 @@ $manguera->save();
 
 ///////////////////M1221--------------------------->
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 01";
+        $instalacion->identificador = "M1221-01";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 21;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 02";
+        $instalacion->identificador = "M1221-02";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 39;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 03";
+        $instalacion->identificador = "M1221-03";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 25;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 04";
+        $instalacion->identificador = "M1221-04";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 25;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 05";
+        $instalacion->identificador = "M1221-05";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 39;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 06";
+        $instalacion->identificador = "M1221-06";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 15;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 07";
+        $instalacion->identificador = "M1221-07";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 25;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 08";
+        $instalacion->identificador = "M1221-08";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 48;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 09";
+        $instalacion->identificador = "M1221-09";
         $instalacion->nota = "NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Desmontar";
         $instalacion->maquina_id = 2 ;
@@ -1090,7 +1090,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 10";
+        $instalacion->identificador = "M1221-10";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1102,7 +1102,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 11";
+        $instalacion->identificador = "M1221-11";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1113,7 +1113,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 14";
+        $instalacion->identificador = "M1221-14";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1124,7 +1124,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 15";
+        $instalacion->identificador = "M1221-15";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1135,7 +1135,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 16";
+        $instalacion->identificador = "M1221-16";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1146,7 +1146,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 17";
+        $instalacion->identificador = "M1221-17";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1157,7 +1157,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 18";
+        $instalacion->identificador = "M1221-18";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1168,21 +1168,21 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 19";
+        $instalacion->identificador = "M1221-19";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 2;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 20";
+        $instalacion->identificador = "M1221-20";
         $instalacion->nota = "";
         $instalacion->maquina_id = 2 ;
         $instalacion->manguera_id = 1;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 21";
+        $instalacion->identificador = "M1221-21";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1193,7 +1193,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 22";
+        $instalacion->identificador = "M1221-22";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1204,7 +1204,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 23";
+        $instalacion->identificador = "M1221-23";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1215,7 +1215,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 24";
+        $instalacion->identificador = "M1221-24";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1226,7 +1226,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1221 - 25";
+        $instalacion->identificador = "M1221-25";
         $instalacion->instalacion = \Carbon\Carbon::parse("18-10-2022");
         $instalacion->chequeo = 4;
         $instalacion->cambio = 4;
@@ -1240,21 +1240,21 @@ $manguera->save();
 ///////////////----------------------------------->M1222
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 01";
+        $instalacion->identificador = "M1222-01";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 16;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 02";
+        $instalacion->identificador = "M1222-02";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 16;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 03";
+        $instalacion->identificador = "M1222-03";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1262,7 +1262,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 04";
+        $instalacion->identificador = "M1222-04";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1270,7 +1270,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 05";
+        $instalacion->identificador = "M1222-05";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1278,7 +1278,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 06";
+        $instalacion->identificador = "M1222-06";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1286,7 +1286,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 07";
+        $instalacion->identificador = "M1222-07";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1294,7 +1294,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 08";
+        $instalacion->identificador = "M1222-08";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1302,7 +1302,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 09";
+        $instalacion->identificador = "M1222-09";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1310,7 +1310,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 10";
+        $instalacion->identificador = "M1222-10";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1318,7 +1318,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 11";
+        $instalacion->identificador = "M1222-11";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1326,7 +1326,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 12";
+        $instalacion->identificador = "M1222-12";
         $instalacion->nota = "MEJORA CONEXIÓN 2 A 90°";
         $instalacion->estado_compra = "Mejora";
         $instalacion->maquina_id = 4 ;
@@ -1334,7 +1334,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 13";
+        $instalacion->identificador = "M1222-13";
         $instalacion->nota = "MEJORA CONEXIÓN 2 A 90°";
         $instalacion->estado_compra = "Mejora";
         $instalacion->maquina_id = 4 ;
@@ -1342,42 +1342,42 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 14";
+        $instalacion->identificador = "M1222-14";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 27;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 15";
+        $instalacion->identificador = "M1222-15";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 44;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 16";
+        $instalacion->identificador = "M1222-16";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 40;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 17";
+        $instalacion->identificador = "M1222-17";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 50;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 18";
+        $instalacion->identificador = "M1222-18";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 43;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 21";
+        $instalacion->identificador = "M1222-21";
         $instalacion->nota = "NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Desmontar";
         $instalacion->maquina_id = 4 ;
@@ -1385,7 +1385,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 22";
+        $instalacion->identificador = "M1222-22";
         $instalacion->nota = "NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Desmontar";
         $instalacion->maquina_id = 4 ;
@@ -1393,7 +1393,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 23";
+        $instalacion->identificador = "M1222-23";
         $instalacion->nota = "NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Desmontar";
         $instalacion->maquina_id = 4 ;
@@ -1401,7 +1401,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 24";
+        $instalacion->identificador = "M1222-24";
         $instalacion->nota = "NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Desmontar";
         $instalacion->maquina_id = 4 ;
@@ -1409,7 +1409,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 25";
+        $instalacion->identificador = "M1222-25";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1417,7 +1417,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 26";
+        $instalacion->identificador = "M1222-26";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1425,7 +1425,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 27";
+        $instalacion->identificador = "M1222-27";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1433,7 +1433,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 28";
+        $instalacion->identificador = "M1222-28";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1441,7 +1441,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 29";
+        $instalacion->identificador = "M1222-29";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1449,28 +1449,28 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 30";
+        $instalacion->identificador = "M1222-30";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 56;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 31";
+        $instalacion->identificador = "M1222-31";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 57;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 32";
+        $instalacion->identificador = "M1222-32";
         $instalacion->nota = "";
         $instalacion->maquina_id = 4 ;
         $instalacion->manguera_id = 58;
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 33";
+        $instalacion->identificador = "M1222-33";
         $instalacion->nota = "REQUIERE CAMBIO, NECESARIO DESMONTAR PARA TOMA DE DATOS";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1478,7 +1478,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 34";
+        $instalacion->identificador = "M1222-34";
         $instalacion->nota = "REQUIERE  CAMBIO";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1486,7 +1486,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 35";
+        $instalacion->identificador = "M1222-35";
         $instalacion->nota = "CAMBIO  (URGE TIENE FUGA Y ESTA LUIDA)";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
@@ -1494,7 +1494,7 @@ $manguera->save();
         $instalacion->save();
 
         $instalacion = new Magueras_Maquinas();
-        $instalacion->identificador = "M1222 - 36";
+        $instalacion->identificador = "M1222-36";
         $instalacion->nota = "CAMBIO  (URGE TIENE FUGA Y ESTA LUIDA)";
         $instalacion->estado_compra = "Cambio";
         $instalacion->maquina_id = 4 ;
