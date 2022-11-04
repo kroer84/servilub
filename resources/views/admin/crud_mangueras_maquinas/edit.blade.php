@@ -67,6 +67,7 @@
                             <select class="form-select" name="estado_compra" aria-label="Default select example">
                                 <option selected value="{{ $dato->estado_compra }}">{{ $dato->estado_compra }}</option>
                                 <option value="Instalada">Instalada</option>
+                                <option value="Sin Instalar">Sin Instalar</option>
                             <option value="Presupuesto">Presupuestada</option>
                             <option value="Pedido">Pedido</option>
                             <option value="Almacen">Almacen</option>

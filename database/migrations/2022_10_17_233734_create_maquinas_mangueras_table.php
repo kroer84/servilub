@@ -20,7 +20,7 @@ class CreateMaquinasManguerasTable extends Migration
             $table->integer('chequeo')->nullable(true);
             $table->integer('cambio')->nullable(true);
             $table->date('fechaCambio')->nullable(true);
-            $table->enum('estado_compra',['Instalada', 'Presupuesto', 'Pedido','Almacen','Cambio','Desmontar','Mejora'])->default('Instalada')->nullable(true);
+            $table->enum('estado_compra',['Instalada', 'Sin Instalar','Presupuesto', 'Pedido','Almacen','Cambio','Desmontar','Mejora'])->default('Sin Instalar')->nullable(true);
             $table->string('nota')->defaul(' ')->nullable(true);
             $table->decimal('precio')->default(0);
             $table->unsignedBigInteger('maquina_id')->unsigned();

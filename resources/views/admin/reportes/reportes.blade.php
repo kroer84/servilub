@@ -62,7 +62,12 @@
                         <td class="text-center"> </td>
                         <td class="text-center">{{ $dato->manguera->descripcion }}</td>
                         {{-- <td class="text-center">{{ $dato->instalacion }}</td> --}}
-                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}</td>
+                        @if ($dato->instalacion != null)
+                        <td class="text-center">{{ \Carbon\Carbon::parse($dato->instalacion)->format('d/m/Y') }}
+                        </td>
+                        @else
+                        <td></td>
+                        @endif
                         <td class="text-center">{{ $dato->manguera->manguera}}</td>
                         <td class="text-center">{{ $dato->manguera->fitting1 }}</td>
                         <td class="text-center">{{ $dato->manguera->fitting2 }}</td>
