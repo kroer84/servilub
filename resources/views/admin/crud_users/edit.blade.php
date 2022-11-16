@@ -40,8 +40,8 @@
                             <div class="col-lg-10 col-md-12">
                                 <select class="form-select" name="role" aria-label="Default select example">
                                     <option selected>{{ ($user->role == 'Admin') ? 'Admin' : 'User' }}</option>
-                                    <option value="User">User</option>
-                                    <option value="Admin">Admin</option>
+                                    <option value='User'>User</option>
+                                    <option value='Admin'>Admin</option>
                                 </select>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
                             <div class="col-lg-10 col-md-12">
                                 <select class="form-select" name="state" aria-label="Default select example">
                                     <option selected>{{ ($user->state == 'On') ? 'On' : 'Off' }}</option>
-                                    <option value="On">On</option>
-                                    <option value="Off">Off</option>
+                                    <option value='On'>On</option>
+                                    <option value='Off'>Off</option>
                                 </select>
                             </div>
                         </div>

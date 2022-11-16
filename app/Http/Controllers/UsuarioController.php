@@ -91,7 +91,6 @@ class UsuarioController extends Controller
         $actualizar->role = $request->role;
         $actualizar->state = $request->state;
         $actualizar->email = $request->email;
-        $actualizar->password = bcrypt($request->password);
         $actualizar->save();
         return redirect()->route('admin.users.index')->with('success','Los Datos Del Usiario Se Actualizaron Satisfactoriamente.');
     }
